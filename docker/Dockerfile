@@ -13,7 +13,7 @@ COPY src/ /app/src
 # If you are building your code for production
 
 
-RUN npm install -g npm@latest leo-cli@2.6.2
+RUN npm install -g npm@latest
 
 RUN npm -g install
 #RUN npm ci --only=production
