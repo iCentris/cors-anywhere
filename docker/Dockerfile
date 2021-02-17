@@ -12,8 +12,10 @@ COPY src/ /app/src
 # RUN npm install
 # If you are building your code for production
 
-
+COPY . .
 RUN npm install -g npm@latest
+
+RUN npm -g install
 
 #RUN npm -g install
 #RUN npm ci --only=production
