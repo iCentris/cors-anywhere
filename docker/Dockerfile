@@ -7,13 +7,12 @@ COPY src/ /app/src
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
-#COPY src/package*.json ./
+COPY src/package*.json ./
 
 # RUN npm install
 # If you are building your code for production
 
-COPY . .
-RUN npm install -g npm@latest
+#RUN npm install -g npm@latest
 
 RUN npm -g install
 
@@ -21,7 +20,7 @@ RUN npm -g install
 #RUN npm ci --only=production
 
 # Bundle app source
-#COPY . .
+COPY . .
 EXPOSE 8080
 CMD [ "node", "server.js" ]
 
